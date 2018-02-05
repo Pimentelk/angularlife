@@ -1,0 +1,17 @@
+.table td {
+	text-align: center;
+	width: 55px;
+	height: 55px;
+}
+
+.dropdown-item {
+	cursor: pointer;
+}
+
+.fa-heart {
+	color: red;
+}
+
+.fa-times {
+	color: black;
+}

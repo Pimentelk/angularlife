@@ -1,0 +1,22 @@
+<div class="container mt-5">	
+	<div class="row">
+	  	<div class="col-md-12">
+			<h2 style="text-align: center;">The Game of Life</h2>
+			<grid id="grid" class="mt-5"></grid>
+	  	</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12 mt-3">
+			<h2 style="text-align: center;">Rules for the Game of Life</h2>					
+			<ul class="list-group mt-3">
+				<li class="list-group-item"><p>The neighbors of a given cell are the eight cells that touch it vertically, horizontally, or diagonally.</p></li>
+				<li class="list-group-item"><p>If a cell is alive <i class="fa fa-heart"></i> but either has no neighboring cells alive or only one alive, then in the next generation the cell dies <i class="fa fa-times"></i> of loneliness.</p></li>
+				<li class="list-group-item"><p>If a cell is alive and has four or more neighboring cells also alive, then it the next generation the cell dies from overcrowding.</p></li>
+				<li class="list-group-item"><p>A living cell with either two or three living neighbors remains alive in the next generation.</p></li>
+				<li class="list-group-item"><p>If a cell is dead, then in the next generation it will become alive if it has exactly three neighboring cells, no more or fewer, that are already alive. All other dead cells remain dead in the next generation.</p></li>
+				<li class="list-group-item"><p>All births and deaths take place at exactly the same time, so that dying cells can help to give birth to another, but cannot prevent the death of others by reducing overcrowding; nor can cells being born either preserve or kill cells living in  the previous generation.</p></li>
+			</ul>			
+		</div>
+	</div>
+</div>
