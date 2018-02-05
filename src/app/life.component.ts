@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
 
 @Component({
-	selector: 'grid',
+	selector: 'grid-component',
 	templateUrl: '../assets/partials/grid.html',
 	styleUrls: ['../assets/css/grid.css']
 })
 
 export class Life {
 	
+	public grid:any[];
+	
 	private hedge:number = 2;
 	private maxrow:number = 10;
 	private maxcol:number = 20;	
-	private grid:any[];
 	private simulationInterval:any;
 	private isSimulating:boolean = false;
 
@@ -25,15 +26,13 @@ export class Life {
 	}
 
 	public update() {
-		let row, col;
-
+		
 		let new_grid:any[] = this.reset();
 
 		for (let row = 1; row <= this.maxrow; row++) {
 			for (let col = 1; col <= this.maxcol; col++) {
-				let count = this.neighborCount(row,col);
 				
-				switch (count) {
+				switch (this.neighborCount(row,col)) {
 					case 2:
 						new_grid[row][col] = this.grid[row][col];
 						break;
@@ -177,11 +176,11 @@ export class Life {
 	        return false;
 	    }
 
-	    for (var i = 0, len = array1.length; i < len; i++) {
+	    for (let i = 0, len = array1.length; i < len; i++) {
 	        if (!this.arraysEqual(array1[i], array2[i])) {
 	            return false;
 	        }
 	    }
 	    return true;
-	}
+	} 
 }
