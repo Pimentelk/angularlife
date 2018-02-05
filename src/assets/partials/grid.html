@@ -1,9 +1,9 @@
 <ul class="nav nav-pills nav-fill mt-5">  
   <li class="nav-item">
-    <a class="dropdown-item" (click)="startSimulation()">Auto Simulate</a>
+    <a class="dropdown-item" (click)="simulate()">Auto Simulate</a>
   </li>
   <li class="nav-item">
-    <a class="dropdown-item" (click)="refresh()">Refresh</a>
+    <a class="dropdown-item" (click)="refresh()">Random</a>
   </li>
   <li class="nav-item">
     <a class="dropdown-item" (click)="cheshireCat()">Cheshire Cat Simulation</a>
@@ -12,13 +12,13 @@
     <a class="dropdown-item" (click)="tumbler()">Tumbler Simulation</a>
   </li>
   <li class="nav-item">
-    <a class="dropdown-item" (click)="update()">Next Generation</a>
+    <a class="dropdown-item" (click)="next()">Next Generation</a>
   </li>
 </ul>
 
 <table class="table table-striped mt-1">        
   <tbody>
-    <tr *ngFor="let row of grid;">
+    <tr *ngFor="let row of grid.getGrid();">
       <td *ngFor="let col of row;">
         <span><i [ngClass]="{ 'fa':true,'fa-heart':(col == 1), 'fa-times':(col == 0) }"></i></span>
       </td>
